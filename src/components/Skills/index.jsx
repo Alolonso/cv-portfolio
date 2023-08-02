@@ -1,36 +1,49 @@
+import './Skills.scss'
+
 export const Skills = () => {
     return (
-        <section>
-            <h2>Skills</h2>
+        <>
+            <section id='Skills' className='Skills'>
+                <h2 className='Skills--title'>Skills</h2>
 
-            <h3>Technologies</h3>
-            <ul>
-                <li>JavaScript</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Notion</li>
-                <li>Figma</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>npm</li>
-                <li>React.js</li>
-            </ul>
+                <div className='Skills--container'>
+                    <div className='Skills--card'>
+                        <div>
+                            <h3 id='SoftSkills' className='Skills--h3'>Soft Skills</h3>
+                            <ul className='Skills--list'>
+                                <li className='Skills--li'>- Teamwork</li>
+                                <li className='Skills--li'>- Time management</li>
+                                <li className='Skills--li'>- Self-starter</li>
+                                <li className='Skills--li'>- Communication skills</li>
+                                <li className='Skills--li'>- Adaptability</li>
+                                <li className='Skills--li'>- Collaboration</li>
+                                <li className='Skills--li'>- Responsibility</li>
+                            </ul>
+                        </div>
+                    </div>
 
-            <h3>Soft Skills</h3>
-            <ul>
-                <li>Teamwork</li>
-                <li>Time management</li>
-                <li>Self-starter</li>
-                <li>Communication skills</li>
-                <li>Adaptability</li>
-                <li>Collaboration</li>
-                <li>Responsibility</li>
-            </ul>
-            <h3>Languages</h3>
-            <ul>
-                <li>Native Spanish</li>
-                <li>English B1</li>
-            </ul>
-        </section>
+                    <div className='Skills--card'>
+                        <div>
+                            <h3 id='Technologies' className='Skills--h3'>Technologies</h3>
+                            <ul className='Skills--list'>
+                                <li className='Skills--li'>- React.js</li>
+                                <li className='Skills--li'>- Vite.js</li>
+                                <li className='Skills--li'>- Sass</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div className='Skills--card'>
+                        <div>
+                            <h3 id='Languages' className='Skills--h3'>Languages</h3>
+                            <ul className='Skills--list'>
+                                <li className='Skills--li'>- Native Spanish</li>
+                                <li className='Skills--li'>- English B1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </>
     )
 }

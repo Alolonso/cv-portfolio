@@ -1,0 +1,33 @@
+$primary-color: #FFFA62;
+$secondary-color: #FFFB84;
+$tertiary-color: #FFFDB3;
+$quaternary-color: #3A3A3A;
+$primary-size: 40px;
+$secondary-size: 24px;
+$tertiary-size: 20px;
+$quaternary-size: 16px;
+$quinary-size: 14px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    padding: 20px;
+    font-family: 'Dosis', sans-serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        padding: 20px 15%;
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        padding: 20px 25%;
+    }
+}

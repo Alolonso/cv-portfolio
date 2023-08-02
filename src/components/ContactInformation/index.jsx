@@ -1,11 +1,52 @@
+import GmailSVG from '/icons/gmail.svg'
+import LinkedInSVG from '/icons/linkedin.svg'
+import GitHubSVG from '/icons/github.svg'
+import PlatziSVG from '/icons/platzi.svg'
+import './ContactInformation.scss'
+
 export const ContactInformation = () => {
     return (
-        <section>
-            <h2>Contact information</h2>
-            <p>Gmail: joseloso1181mana04@gmail.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/jos%C3%A9-alonso-d%C3%ADaz-ram%C3%ADrez-678ba8285" target="_blank">José Alonso Díaz Ramírez</a></p>
-            <p>GitHub: <a href="https://github.com/Alolonso" target="_blank">Alolonso</a></p>
-            <p>Platzi: <a href="https://platzi.com/p/Alolonso/" target="_blank">José Alonso Díaz Ramírez</a></p>
+        <section id='Contact' className="Contact">
+            <h2 className="Contact--title">Contact information</h2>
+
+            <ul className='Contact--list'>
+                <li className="Contact--card">
+                    <img className="Contact--icon" src={GmailSVG} alt="" />
+                    <p className="Contact--p">
+                        <span className='Contact--p__bold'>Gmail:</span> joseloso1181mana04@gmail.com
+                    </p>
+                </li>
+
+                <li className="Contact--card">
+                    <img className="Contact--icon" src={LinkedInSVG} alt="" />
+                    <p className="Contact--p">
+                        <span className='Contact--p__bold'>LinkedIn: </span>
+                        <a className="Contact--a" href="https://www.linkedin.com/in/jos%C3%A9-alonso-d%C3%ADaz-ram%C3%ADrez-678ba8285" target="_blank">
+                            José Alonso Díaz Ramírez
+                        </a>
+                    </p>
+                </li>
+
+                <li className="Contact--card">
+                    <img className="Contact--icon" src={GitHubSVG} alt="" />
+                    <p className="Contact--p">
+                        <span className='Contact--p__bold'>GitHub: </span>
+                        <a className="Contact--a" href="https://github.com/Alolonso" target="_blank">
+                            Alolonso
+                        </a>
+                    </p>
+                </li>
+
+                <li className="Contact--card">
+                    <img className="Contact--icon" src={PlatziSVG} alt="" />
+                    <p className="Contact--p">
+                        <span className='Contact--p__bold'>Platzi: </span>
+                        <a className="Contact--a" href="https://platzi.com/p/Alolonso/" target="_blank">
+                            José Alonso Díaz Ramírez
+                        </a>
+                    </p>
+                </li>
+            </ul>
         </section>
     )
 }
