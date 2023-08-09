@@ -8,7 +8,7 @@ import { WorkExperience } from './components/WorkExperience'
 import { Skills } from './components/Skills'
 import { Studies } from './components/Studies'
 import { Slider } from './components/Slider'
-
+import { Certificates } from './components/Certificates'
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <Skills/>
         <Slider/>
         <Studies/>
+        <Certificates/>
       </div>
     </>
   )
