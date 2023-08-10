@@ -1,5 +1,6 @@
 import { Academic } from '../Academic'
 import { Courses } from '../Courses'
+import { Web } from '../Web'
 import './Certificates.scss'
 
 export const Certificates = () => {
@@ -9,6 +10,7 @@ export const Certificates = () => {
             <div className="Certificates--container">
                 <Academic/>
                 <Courses/>
+                <Web/>
             </div>
 
             
