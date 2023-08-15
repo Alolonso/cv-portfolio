@@ -1,33 +1,30 @@
 .Web {
 
     &--title {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 1.5rem;
     }
 
     &--list {
         list-style: none;
-        font-size: 16px;
+        font-size: 1.6rem;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 2rem;
     }
 
     &--card {
         background-color: #F5F5F5;
         display: flex;
         align-items: center;
-        gap: 20px;
-        padding: 10px 20px;
-        border-radius: 15px;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 1.5rem;
     }
 
     &--icon {
-        height: 50px;
-    }
-
-    &--text {
+        height: 5rem;
     }
 
     &--text__bold {
@@ -35,7 +32,7 @@
     }
 
     &--text__course {
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: bold;
     }
     
@@ -45,69 +42,8 @@
 }
 
 @media (min-width: 650px) {
+
     .Web--list {
         grid-template-columns: 1fr 1fr;
     }
-    .Web--card {
-    }
 }
-
-// .Web {
-
-//     &--title {
-//         font-size: 20px;
-//         font-weight: bold;
-//         margin-bottom: 10px;
-//     }
-
-//     &--list {
-//         list-style: none;
-//         display: flex;
-//         flex-direction: column;
-//         gap: 15px;
-//         font-size: 16px;
-//         justify-content: start;
-//         flex-wrap: nowrap;
-//     }
-
-//     &--card {
-//         background-color: #F5F5F5;
-//         display: flex;
-//         align-items: center;
-//         gap: 20px;
-//         padding: 10px 20px;
-//         border-radius: 15px;
-//     }
-
-//     &--icon {
-//         height: 50px;
-//     }
-
-//     &--text {
-//     }
-
-//     &--text__bold {
-//         font-weight: bold;
-//     }
-
-//     &--text__course {
-//         font-size: 18px;
-//         font-weight: bold;
-//     }
-    
-//     &--link {
-//         color: #00a6eb;
-//     }
-// }
-
-// @media (min-width: 500px) {
-//     .Web--list {
-//         display: flex;
-//         flex-direction: row;
-//         flex-wrap: wrap;
-//         justify-content: start;
-//     }
-//     .Web--card {
-//         width: 48.7%;
-//     }
-// }

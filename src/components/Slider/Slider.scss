@@ -4,32 +4,28 @@
 
     &--track {
         display: flex;
-        width: calc(250px * 22);
+        width: calc(25rem * 22);
         animation: scroll 40s linear infinite;
-    }
-
-    &--track:hover {
-        animation-play-state: paused;
     }
 
     &--item {
         background-color: #F5F5F5;
-        width: 250px;
-        height: 100px;
+        width: 25rem;
+        height: 10rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        border-radius: 15px;
-        margin: 0 10px;
+        gap: 1rem;
+        border-radius: 1.5rem;
+        margin: 0 1rem;
     }
 
     &--img {
-        height: 43px;
+        height: 4.3rem;
     }
     
     &--p {
-        font-size: 27px;
+        font-size: 2.7rem;
         font-weight: bold;
     }
 }
@@ -39,6 +35,12 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-250px * 11));
+        transform: translateX(calc(-25rem * 11));
+    }
+}
+
+@media (min-width: 1000px) {
+    .Slider--track:hover {
+        animation-play-state: paused;
     }
 }

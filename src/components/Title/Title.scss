@@ -1,16 +1,16 @@
-.Header {
+.TitleContainer {
     background-color: #F5F5F5;
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 2rem;
+    padding: 2rem;
 
-    &--h1 {
-        font-size: 40px;
+    &--title {
+        font-size: 4rem;
         color: #00a6eb;
     }
     
-    &--p {
-        font-size: 16px;
-        border-left: 2px solid #00a6eb;
-        padding-left: 20px;
+    &--text {
+        font-size: 1.7rem;
+        border-left: 0.2rem solid #00a6eb;
+        padding-left: 2rem;
     }
 }

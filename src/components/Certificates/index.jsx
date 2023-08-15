@@ -3,7 +3,7 @@ import { Courses } from '../Courses'
 import { Web } from '../Web'
 import './Certificates.scss'
 
-export const Certificates = () => {
+export const Certificates = (  ) => {
     return (
         <section className='Certificates'>
             <h2 className='Certificates--title'>Certificates</h2>
@@ -12,8 +12,6 @@ export const Certificates = () => {
                 <Courses/>
                 <Web/>
             </div>
-
-            
         </section>
     )
 }

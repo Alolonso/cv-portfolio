@@ -1,36 +1,35 @@
 import './Courses.scss'
+import React from 'react'
+import { CvContext } from '../CvContext'
 
 export const Courses = () => {
+    const { courses } = React.useContext(CvContext)
+    
     return (
         <section className='Courses'>
             <h2 className='Courses--title'>Courses</h2>
 
             <ul className='Courses--list'>
-                <li className='Courses--item'>
-                    <a className='Courses--link' href="https://platzi.com/p/Alolonso/curso/1814-basico-javascript/diploma/detalle/" target="_blank">
+                {courses?.map(cour => 
+                    <li 
+                        key={cour.id}
+                        className='Courses--item'
+                    >
+                        
                         <figure>
-                            <img className='Courses--image' src="https://i.imgur.com/TBAabF6.png" alt="" />
+                            <img className='Courses--image' src={cour.image} alt="" />
                         </figure>
                         <div className='Courses--description'>
                             <figure>
-                                <img className='Courses--icon' src="https://i.imgur.com/dAKmMiD.png" alt="" />
+                                <img className='Courses--icon' src={cour.icon} alt="" />
                             </figure>
-                            <p className='Courses--text'>Bachiller en educación media</p>
+                            <div>
+                                <p className='Courses--text__title'>{ cour.title }</p>
+                                <p className='Courses--text'>{cour.academy}</p>
+                            </div>
                         </div>
-                    </a>
-                </li>
-
-                <li className='Courses--item'>
-                    <figure>
-                        <img className='Courses--image' src="https://i.imgur.com/qz9l4xy.jpg" alt="" />
-                    </figure>
-                    <div className='Courses--description'>
-                        <figure>
-                            <img className='Courses--icon' src="https://static.platzi.com/media/achievements/badge-basicojs-e2ead888-428e-4f55-962c-8894aeaeacda.png" alt="" />
-                        </figure>
-                        <p className='Courses--text'>Curso Básico de JavaScript</p>
-                    </div>
-                </li>
+                    </li>
+                )}
             </ul>
         </section>
     )

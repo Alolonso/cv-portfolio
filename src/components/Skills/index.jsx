@@ -1,6 +1,14 @@
 import './Skills.scss'
+import React from 'react'
+import { CvContext } from '../CvContext'
+import { Slider } from '../Slider'
+
 
 export const Skills = () => {
+    const { soft } = React.useContext(CvContext)
+    const { technologies } = React.useContext(CvContext)
+    const { languages } = React.useContext(CvContext)
+
     return (
         <>
             <section id='Skills' className='Skills'>
@@ -9,40 +17,47 @@ export const Skills = () => {
                 <div className='Skills--container'>
                     <div className='Skills--card'>
                         <div>
-                            <h3 id='SoftSkills' className='Skills--h3'>Soft Skills</h3>
+                            <h3 id='SoftSkills' className='Skills--subtitle'>Soft Skills</h3>
                             <ul className='Skills--list'>
-                                <li className='Skills--li'>- Teamwork</li>
-                                <li className='Skills--li'>- Time management</li>
-                                <li className='Skills--li'>- Self-starter</li>
-                                <li className='Skills--li'>- Communication skills</li>
-                                <li className='Skills--li'>- Adaptability</li>
-                                <li className='Skills--li'>- Collaboration</li>
-                                <li className='Skills--li'>- Responsibility</li>
+                                {soft?.map(sof => 
+                                    <li 
+                                        key={sof}
+                                        className='Skills--item'
+                                    ><span>- </span> {sof} </li>
+                                )}
                             </ul>
                         </div>
                     </div>
 
                     <div className='Skills--card'>
                         <div>
-                            <h3 id='Technologies' className='Skills--h3'>Technologies</h3>
+                            <h3 id='Technologies' className='Skills--subtitle'>Technologies</h3>
                             <ul className='Skills--list'>
-                                <li className='Skills--li'>- React.js</li>
-                                <li className='Skills--li'>- Vite.js</li>
-                                <li className='Skills--li'>- Sass</li>
+                                {technologies?.map(tec => 
+                                    <li 
+                                        key={tec}
+                                        className='Skills--item'
+                                    ><span>- </span> {tec} </li>
+                                )}
                             </ul>
                         </div>
                     </div>
 
                     <div className='Skills--card'>
                         <div>
-                            <h3 id='Languages' className='Skills--h3'>Languages</h3>
+                            <h3 id='Languages' className='Skills--subtitle'>Languages</h3>
                             <ul className='Skills--list'>
-                                <li className='Skills--li'>- Native Spanish</li>
-                                <li className='Skills--li'>- English B1</li>
+                                {languages?.map(lan => 
+                                    <li 
+                                        key={lan}
+                                        className='Skills--item'
+                                    ><span>- </span> {lan} </li>
+                                )}
                             </ul>
                         </div>
                     </div>
                 </div>
+                    <Slider/>
             </section>
         </>
     )

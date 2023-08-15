@@ -1,26 +1,24 @@
 .WorkExperience {
 
     &--title {
-        font-size: 24px;
+        font-size: 2.4rem;
         color: #00a6eb;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
     }
 
     &--list {
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 2rem;
     }
 
-    &--item {}
-
-    &--p {
-        font-size: 16px;
+    &--text {
+        font-size: 1.7rem;
     }
     
-    &--p__bold {
+    &--text__bold {
         font-weight: bold;
-        font-size: 17px;
+        font-size: 1.9rem;
     }
 }

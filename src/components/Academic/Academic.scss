@@ -1,26 +1,21 @@
 .Academic {
     
     &--title {
-        font-size: 20px;
+        font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 10px;
+        margin-bottom: 1.5rem;
     }
 
     &--list {
         list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
     &--item {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 350px;
-        box-shadow: 0px 0px 13px 0px rgba(245,245,245,1);
-        border-radius: 3px;
+        box-shadow: 0rem 0rem 1.3rem 0rem rgba(245,245,245,1);
+        border-radius: 0.3rem;
     }
 
     &--item:hover {
@@ -29,29 +24,33 @@
 
     &--image {
         width: 100%;
-        padding: 10px 10px 0 10px;
+        padding: 1rem 1rem 0 1rem;
     }
 
     &--description {
         display: flex;
-        gap: 15px;
+        gap: 1.5rem;
         align-items: center;
-        min-height: 40px;
-        padding: 10px;
+        padding: 1rem;
     }
 
     &--icon {
-        height: 30px;
+        height: 3.5rem;
     }
 
     &--text {
+        font-size: 1.6rem;
         font-weight: bold;
-        font-size: 16px;
+    }
+
+    &--text__title {
+        font-size: 1.8rem;
+        font-weight: bold;
     }
 }
 
 @media (min-width: 500px) {
-    .Academic--item {
-        width: 45%;
+    .Academic--list {
+        grid-template-columns: 1fr 1fr;
     }
 }
