@@ -2,7 +2,7 @@ import './Studies.scss'
 
 export const Studies = () => {
     return (
-        <section id='Studies' className="Studies">
+        <section className="Studies">
             <h2 className="Studies--title">Studies</h2>
 
             <ul className="Studies--list">

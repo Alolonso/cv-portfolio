@@ -1,0 +1,76 @@
+.Loading {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: none;
+
+    &--content {
+        width: 20rem;
+        height: 20rem;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+    }
+
+    &--content div {
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        transform: translate(8rem,8rem) scale(1);
+        background: #00a6eb;
+        animation: load 3.4482758620689653s infinite cubic-bezier(0,0.5,0.5,1);
+        box-sizing: content-box;
+    }
+
+    &--content div:nth-child(1) {
+        background: #00a6eb;
+        transform: translate(14.8rem,8rem) scale(1);
+        animation: load-r 0.8620689655172413s infinite cubic-bezier(0,0.5,0.5,1), load-c 3.4482758620689653s infinite step-start;
+    }
+
+    &--content div:nth-child(2) {
+        animation-delay: -0.8620689655172413s;
+        background: #00a6eb;
+    }
+
+    &--content div:nth-child(3) {
+        animation-delay: -1.7241379310344827s;
+        background: #00a6eb;
+    }
+
+    &--content div:nth-child(4) {
+        animation-delay: -2.5862068965517238s;
+        background: #00a6eb;
+    }
+
+    &--content div:nth-child(5) {
+        animation-delay: -3.4482758620689653s;
+        background: #00a6eb;
+    }
+}
+
+@keyframes load {
+    0% { transform: translate(12px,80px) scale(0); }
+    25% { transform: translate(12px,80px) scale(0); }
+    50% { transform: translate(12px,80px) scale(1); }
+    75% { transform: translate(80px,80px) scale(1); }
+    100% { transform: translate(148px,80px) scale(1); }
+}
+
+@keyframes load-r {
+    0% { transform: translate(148px,80px) scale(1); }
+    100% { transform: translate(148px,80px) scale(0); }
+}
+
+@keyframes load-c {
+    0% { background: #00a6eb }
+    25% { background: #00a6eb }
+    50% { background: #00a6eb }
+    75% { background: #00a6eb }
+    100% { background: #00a6eb }
+}

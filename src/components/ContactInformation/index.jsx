@@ -2,8 +2,8 @@ import './ContactInformation.scss'
 
 export const ContactInformation = () => {
     return (
-        <section id='Contact' className="Contact">
-            <h2 className="Contact--title">Contact information</h2>
+        <section className="Contact">
+            <h2 id='contactinformation' className="Contact--title">Contact information</h2>
 
             <ul className='Contact--list'>
                 <li className="Contact--card">

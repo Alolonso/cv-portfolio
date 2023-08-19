@@ -6,9 +6,11 @@ const useImportData = () => {
     const [error, setError] = React.useState(false);
 
     React.useEffect(() => {
-        fetch('https://alolonso.github.io/certi/base.json')
+        fetch('https://alolonso.github.io/cv-database/db.json')
         .then(response => response.json())
         .then(response => setData(response))
+        .catch(() => setError("An error occurred while obtaining the data"))
+        .finally(() => setLoading(false))
     }, []);
 
     const {
@@ -19,7 +21,8 @@ const useImportData = () => {
         soft,
         technologies,
         tools,
-        web
+        web,
+        projects
     } = data
 
     return {
@@ -30,7 +33,10 @@ const useImportData = () => {
         soft,
         technologies,
         tools,
-        web
+        web,
+        projects,
+        loading,
+        error
     }
 }
 
@@ -46,10 +52,11 @@ export const CvProvider = ({ children }) => {
         soft,
         technologies,
         tools,
-        web
+        web,
+        projects,
+        loading,
+        error
     } = useImportData()
-
-    const [locate, setlocate] = React.useState("home");
 
     return (
         <CvContext.Provider value={ {
@@ -61,56 +68,11 @@ export const CvProvider = ({ children }) => {
             technologies,
             tools,
             web,
-            locate,
-            setlocate
+            projects,
+            loading,
+            error
         } }>
             { children }
         </CvContext.Provider>
     )
 }
-
-
-
-
-
-
-
-
-
-
-
-// import { useImportData } from './ImportData';
-
-
-// const useImportData = () => {
-//     const [data, setData] = React.useState([]);
-//     const [loading, setLoading] = React.useState(true);
-//     const [error, setError] = React.useState(false);
-    
-//     React.useEffect(() => {
-//         try {
-//             fetch('https://alolonso.github.io/certi/base.json')
-//                 .then(response => response.json())
-//                 .then(response => setData(response));
-//                 setLoading(false);
-//         } catch(error) {
-//             setLoading(false);
-//             setError(true);
-//         }
-//     }, []);
-
-//     return {data, loading, error};
-// }
-
-// export const CvContext = React.createContext()
-
-// export const CvProvider = ({ children }) => {
-//     const {data, loading, error} = useImportData()
-
-//     return (
-//         <CvContext.Provider value={ {data, loading, error} }>
-//             { children }
-//         </CvContext.Provider>
-//     )
-// }
-

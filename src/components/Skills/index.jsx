@@ -11,13 +11,13 @@ export const Skills = () => {
 
     return (
         <>
-            <section id='Skills' className='Skills'>
+            <section className='Skills'>
                 <h2 className='Skills--title'>Skills</h2>
 
                 <div className='Skills--container'>
                     <div className='Skills--card'>
                         <div>
-                            <h3 id='SoftSkills' className='Skills--subtitle'>Soft Skills</h3>
+                            <h3 className='Skills--subtitle'>Soft Skills</h3>
                             <ul className='Skills--list'>
                                 {soft?.map(sof => 
                                     <li 
@@ -31,7 +31,7 @@ export const Skills = () => {
 
                     <div className='Skills--card'>
                         <div>
-                            <h3 id='Technologies' className='Skills--subtitle'>Technologies</h3>
+                            <h3 className='Skills--subtitle'>Technologies</h3>
                             <ul className='Skills--list'>
                                 {technologies?.map(tec => 
                                     <li 
@@ -45,7 +45,7 @@ export const Skills = () => {
 
                     <div className='Skills--card'>
                         <div>
-                            <h3 id='Languages' className='Skills--subtitle'>Languages</h3>
+                            <h3 className='Skills--subtitle'>Languages</h3>
                             <ul className='Skills--list'>
                                 {languages?.map(lan => 
                                     <li 

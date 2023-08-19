@@ -5,7 +5,7 @@ import { CvContext } from '../CvContext'
 export const WorkExperience = () => {
     const { experience } = React.useContext(CvContext)
     return (
-        <section id='WorkExperience' className='WorkExperience'>
+        <section className='WorkExperience'>
             <h2 className='WorkExperience--title'>Work Experience</h2>
             <ul className='WorkExperience--list'>
 
